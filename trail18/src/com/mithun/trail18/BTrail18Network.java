@@ -32,11 +32,6 @@ import com.mithun.trail18.comm.BTrail18TcpCommConfig;
  */
 @NiagaraType
 @NiagaraProperty(
-  name = "pollScheduler",
-  type = "BNPollScheduler",
-  defaultValue = "new BNPollScheduler()"
-)
-@NiagaraProperty(
   name = "httpConfig",
   type = "BHttpCommConfig",
   defaultValue = "new BHttpCommConfig()"
@@ -62,31 +57,8 @@ public class BTrail18Network
 {
 //region /*+ ------------ BEGIN BAJA AUTO GENERATED CODE ------------ +*/
 //@formatter:off
-/*@ $com.mithun.trail18.BTrail18Network(2783825812)1.0$ @*/
-/* Generated Tue May 27 14:42:36 EDT 2025 by Slot-o-Matic (c) Tridium, Inc. 2012-2025 */
-
-  //region Property "pollScheduler"
-
-  /**
-   * Slot for the {@code pollScheduler} property.
-   * @see #getPollScheduler
-   * @see #setPollScheduler
-   */
-  public static final Property pollScheduler = newProperty(0, new BNPollScheduler(), null);
-
-  /**
-   * Get the {@code pollScheduler} property.
-   * @see #pollScheduler
-   */
-  public BNPollScheduler getPollScheduler() { return (BNPollScheduler)get(pollScheduler); }
-
-  /**
-   * Set the {@code pollScheduler} property.
-   * @see #pollScheduler
-   */
-  public void setPollScheduler(BNPollScheduler v) { set(pollScheduler, v, null); }
-
-  //endregion Property "pollScheduler"
+/*@ $com.mithun.trail18.BTrail18Network(832536021)1.0$ @*/
+/* Generated Tue May 27 15:00:21 EDT 2025 by Slot-o-Matic (c) Tridium, Inc. 2012-2025 */
 
   //region Property "httpConfig"
 
