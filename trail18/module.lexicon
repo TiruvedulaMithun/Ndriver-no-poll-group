@@ -1,0 +1,19 @@
+#
+# Lexicon for the trail18 module.
+#
+
+BTrail18Network.securityDashboard.title={1} Security Dashboard
+BTrail18Network.securityDashboard.info=Security dashboard info
+BTrail18Network.securityDashboard.info.description=Security dashboard description
+BTrail18Network.securityDashboard.warningType1.title=Security dashboard sample warning
+BTrail18Network.securityDashboard.warningType1.description=Security dashboard sample warning description
+BTrail18Network.securityDashboard.alertType1.title=Security dashboard sample alert
+BTrail18Network.securityDashboard.alertType1.description=Security dashboard sample alert description
+
+BTrail18Device.securityDashboard.title= {1} Security Dashboard
+BTrail18Device.securityDashboard.info=Security dashboard info
+BTrail18Device.securityDashboard.info.description=Security dashboard description
+BTrail18Device.securityDashboard.warningType1.title=Security dashboard sample warning
+BTrail18Device.securityDashboard.warningType1.description=Security dashboard sample warning description
+BTrail18Device.securityDashboard.alertType1.title=Security dashboard sample alert
+BTrail18Device.securityDashboard.alertType1.description=Security dashboard sample alert description
