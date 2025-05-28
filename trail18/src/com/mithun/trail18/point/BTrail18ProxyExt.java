@@ -86,13 +86,14 @@ public class BTrail18ProxyExt
 ////////////////////////////////////////////////////////////////
 
   /**
-   * The poll() callback method called from BPollScheduler when it is time to poll this object.
+   * The poll() callback method called from BPollScheduler when it is
+   * time to poll this object.
    */
   @Override
   public void doPoll()
   {
-    // This method is called by the BPollScheduler when it is time to poll this object.
-    // TODO add code to poll the point value
+    // TODO add code to poll the point value.
+    // It is recommended to use the ((BTrail18Network) getNetwork()).postAsync(Runnable to perform the poll) to not block the engine thread
   }
 
   /**
@@ -102,25 +103,54 @@ public class BTrail18ProxyExt
   @Override
   public BPollFrequency getPollFrequency()
   {
+    // Customize the poll frequency if necessary
     return BPollFrequency.DEFAULT;
   }
 
+  /**
+   * This callback is made when the point enters a subscribed
+   * state based on the current status and tuning.
+   * The default behavior of the super.readSubscribed() is
+   * to register to the poll group or poll scheduler.
+   *
+   * Any customization of the readSubscribed method would be to
+   * register for changes or begin polling. Any IO should
+   * be done asynchronously on another thread - never block the
+   * calling thread.  The result of reads should be to call the
+   * readOk() or readFail() method.
+   */
+  @Override
   public void readSubscribed(Context cx)
     throws Exception
   {
+    super.readSubscribed(cx);
     // TODO subscribe to read the point value
   }
 
+  /**
+   * This callback is made when the point enters an unsubscribed
+   * state based on the current status and tuning.
+   * The default behavior of the super.readUnsubscribed() is
+   * to unregister from the poll group or poll scheduler.
+   *
+   * Any customization of the readUnsubscribed method would be to
+   * unregister for changes or stop polling. Any IO should
+   * be done asynchronously on another thread - never block the
+   * calling thread.
+   */
+  @Override
   public void readUnsubscribed(Context cx)
     throws Exception
   {
     // TODO unsubscribe to read the point value
+    super.readUnsubscribed(cx);
   }
 
+  @Override
   public boolean write(Context cx)
     throws Exception
   {
-    // TODO
+    // TODO write the point value. If performing any IO, it is recommended to use the (BTrail18Network) getNetwork()).postAsync(Runnable to perform the write) to not block the engine thread
     return false;
   }
 
